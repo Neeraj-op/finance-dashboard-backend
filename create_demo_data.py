@@ -17,6 +17,9 @@ import random
 def create_demo_data():
     print("Creating demo data...")
     
+    if FinancialRecord.objects.exists():
+        print("Demo data already exists. Skipping...")
+        return
     # Create demo users if they don't exist
     admin, created = User.objects.get_or_create(
         username='demo_admin',

@@ -10,7 +10,10 @@ services:
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
-    startCommand: gunicorn config.wsgi:application
+    startCommand: >
+      python manage.py migrate &&
+      python create_demo_data.py &&
+      gunicorn config.wsgi:application
     envVars:
       - key: SECRET_KEY
         generateValue: true
