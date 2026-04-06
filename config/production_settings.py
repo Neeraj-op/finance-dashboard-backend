@@ -36,7 +36,11 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 
 # CORS
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='').split(',')
+from decouple import config
+cors_origins = config('CORS_ALLOWED_ORIGINS', default='')
+CORS_ALLOWED_ORIGINS = [
+    origin for origin in cors_origins.split(',') if origin
+]
 CORS_ALLOW_CREDENTIALS = True
 
 # Logging

@@ -25,4 +25,4 @@ services:
           name: finance-postgres
           property: connectionString
       - key: PYTHON_VERSION
-        value: 3.10.12
+        value: 3.11.4
