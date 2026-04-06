@@ -33,7 +33,12 @@ The system supports **three roles with different permissions**.
 | **API Base URL** | https://finance-backend-2m27.onrender.com/api/ |
 | **Swagger Documentation** | https://finance-backend-2m27.onrender.com/api/docs |
 
+---
+## 🧪 Testing
 
+| **API Testing Documentation** | https://github.com/Neeraj-op/finance-dashboard-backend/blob/main/API_testing_doc.md |
+
+---
 ---
 
 ## ✨ Features
@@ -186,10 +191,6 @@ Open:
 ```
 http://localhost:8000/api/docs/
 ```
-
-## 🧪 Testing
-
-| **API Testing Documentation** | https://finance-backend-2m27.onrender.com/api/docs |
 
 
 ---
