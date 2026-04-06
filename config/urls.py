@@ -11,9 +11,7 @@ from drf_yasg import openapi
 
 # API Root view
 def api_root(request):
-    """
-    API root endpoint - provides navigation to main endpoints.
-    """
+    
     return JsonResponse({
         'message': 'Welcome to Finance Dashboard API',
         'version': '1.0.0',
@@ -71,7 +69,7 @@ def api_root(request):
     })
 
 
-# Swagger/OpenAPI documentation
+# Swagger documentation
 schema_view = get_schema_view(
     openapi.Info(
         title="Finance Dashboard API",

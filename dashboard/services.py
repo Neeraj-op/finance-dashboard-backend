@@ -113,7 +113,7 @@ class DashboardService:
         # Category choices mapping
         category_map = dict(FinancialRecord.Category.choices)
 
-        # ✅ Income processing
+        # income processing
         income_list = []
         for item in income_by_category:
             category = item['category']
@@ -131,7 +131,7 @@ class DashboardService:
                 "percentage": percentage
             })
 
-        # ✅ Expense processing
+        # expense processing
         expense_list = []
         for item in expense_by_category:
             category = item['category']
